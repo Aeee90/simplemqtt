@@ -10,6 +10,11 @@
 <script>
     export default {
     }
+    const client = required("mqtt").connect('localhost:1883');
+
+    const publish = message=>{
+      client.publish('presence', message);
+    }
 </script>
 
 <style scoped>
